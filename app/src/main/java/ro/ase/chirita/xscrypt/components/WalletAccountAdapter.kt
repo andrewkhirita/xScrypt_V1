@@ -1,0 +1,23 @@
+package ro.ase.chirita.xscrypt.components
+
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.lifecycle.Lifecycle
+import androidx.viewpager2.adapter.FragmentStateAdapter
+import ro.ase.chirita.xscrypt.presentation.wallet_account_send_medical_id.SendMedicalIdFragment
+import ro.ase.chirita.xscrypt.presentation.wallet_account_transaction.WalletAccountTransactionFragment
+
+class WalletAccountAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) : FragmentStateAdapter(fragmentManager, lifecycle) {
+    override fun createFragment(position: Int): Fragment {
+        when (position) {
+            1 -> {
+                return WalletAccountTransactionFragment()
+            }
+        }
+        return SendMedicalIdFragment()
+    }
+
+    override fun getItemCount(): Int {
+        return 2
+    }
+}

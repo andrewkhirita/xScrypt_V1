@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/homeFragment"
+        android:title="Home"
+        android:menuCategory="secondary"
+        android:icon="@drawable/ic_bottom_bar_home" />
+
+    <item android:id="@+id/nimic"
+        android:title=""
+        android:visible="true"
+        android:menuCategory="secondary" />
+
+    <item android:id="@+id/profileFragment"
+        android:title="Profile"
+        android:menuCategory="secondary"
+        android:icon="@drawable/ic_bottom_bar_profile"/>
+</menu>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_transaction_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/black_almost"
+        android:layout_marginTop="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_hash_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/ll_value">
+
+                <TextView
+                    android:id="@+id/tv_hash_tx_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Hash Tx:"
+                    android:fontFamily="@font/league_spartan_light"
+                    android:textColor="@color/gray_400">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_hash_tx_value"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="12345678912345678912345678912345"
+                    android:textColor="@color/white_almost"
+                    android:fontFamily="@font/league_spartan_medium">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_hash_tx"
+                app:layout_constraintBottom_toTopOf="@id/ll_fee">
+
+                <TextView
+                    android:id="@+id/tv_value_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Receiver:"
+                    android:fontFamily="@font/league_spartan_light"
+                    android:textColor="@color/gray_400">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_value_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="1"
+                    android:fontFamily="@font/league_spartan_medium"
+                    android:textColor="@color/white_almost">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_value"
+                app:layout_constraintBottom_toTopOf="@id/ll_status">
+
+                <TextView
+                    android:id="@+id/tv_fee_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Fee ($):"
+                    android:textColor="@color/gray_400"
+                    android:fontFamily="@font/league_spartan_light">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_fee_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="0.0036"
+                    android:fontFamily="@font/league_spartan_medium"
+                    android:textColor="@color/white_almost">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_status"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="8dp">
+
+                <TextView
+                    android:id="@+id/tv_timestamp_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/league_spartan_light"
+                    android:text="Timestamp:"
+                    android:textColor="@color/gray_400">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_timestamp_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Apr 14, 2023 07:41:42 AM UTC"
+                    android:textColor="@color/white_almost"
+                    android:fontFamily="@font/league_spartan_medium">
+
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_fee"
+                app:layout_constraintBottom_toTopOf="@id/ll_timestamp">
+
+                <TextView
+                    android:id="@+id/tv_status_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/league_spartan_light"
+                    android:text="Status:"
+                    android:textColor="@color/gray_400">
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_status_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/league_spartan_medium"
+                    android:text="Success"
+                    android:textColor="@color/white_almost">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

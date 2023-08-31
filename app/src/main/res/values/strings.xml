@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">xScrypt</string>
+
+    <string name="join_ehealth"><u>Join eHealth</u></string>
+    <string name="terms_of_use">By joining, you agree to xScrypt <u>Terms of Service</u>.</string>
+    <string name="marketing">I\'d be happy to hear about exclusive and exciting news. Give me more info in <u>Marketing Consent</u>.</string>
+
+    <string-array name="health_records_category">
+        <item>Allergies</item>
+        <item>Immunizations</item>
+        <item>Medications</item>
+    </string-array>
+
+    <string name="wallet">Wallet</string>
+    <string name="mnemonic">Mnemonic</string>
+    <string name="importWallet">Import wallet</string>
+    <string name="transaction">Transaction</string>
+    <string name="sendTransaction">Send transaction</string>
+    <string name="your_wallet">Your wallet</string>
+    <string name="balance">Balance</string>
+    <string name="nonce">Nonce</string>
+    <string name="address">Address</string>
+    <string name="generate_mnemonic">Generate mnemonic</string>
+    <string name="invalidMnemonic">Invalid mnemonic</string>
+    <string name="close_wallet">Close wallet</string>
+    <string name="destination">Destination</string>
+    <string name="to">To</string>
+    <string name="amount">Amount</string>
+    <string name="message">Message</string>
+    <string name="enter_24_words">Please enter 24 words</string>
+    <string name="invalidAddress">Invalid Address</string>
+    <string name="tx">Tx</string>
+    <string name="data">Data</string>
+    <string name="status">Status</string>
+    <string name="never_share_your_secret_phrase_with_anyone_back_it_up_and_keep_it_safe">Never share your secret phrase with\nanyone. Back it up and keep it safe!</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="test_profile_image_desc">Profile Image</string>
+    <string name="test_profile_name">PROFILE NAME</string>
+    <string name="test_profile_subtitle">subtitle</string>
+    <string name="test_profile_misc_title">misc title 12345</string>
+    <string name="collapsing_profile_behavior" translatable="false">ro.ase.chirita.xscrypt.components.CollapsingProfileBehavior</string>
+    <string name="sign_in_email_title">Email</string>
+    <string name="sign_in_password_title">Password</string>
+    <string name="sign_in_keep_me_logged">Keep me logged in</string>
+    <string name="sign_in_started_button">Let\'s get started</string>
+    <string name="sign_up_full_name_title">Full Name</string>
+    <string name="sign_up_email_title">Email</string>
+    <string name="sign_up_password_title">Password</string>
+    <string name="sign_up_category">Select a specific category</string>
+    <string name="sign_up_patient_category">PATIENT</string>
+    <string name="sign_up_doctor_category">DOCTOR</string>
+    <string name="sign_up_next_button">Next</string>
+    <string name="create_wallet_secret_phrase_title">Secret Phrase</string>
+    <string name="create_wallet_finish_button">Finish</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

@@ -1,0 +1,48 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ro.ase.chirita.xscrypt.presentation.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ro.ase.chirita.xscrypt.presentation.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/chooseDoctor"
+        android:name="ro.ase.chirita.xscrypt.presentation.choose_doctor.ChooseDoctorDialogFragment"
+        android:label="fragment_choose_doctor"
+        tools:layout="@layout/fragment_choose_doctor_dialog">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/importWallet"
+        android:name="ro.ase.chirita.xscrypt.presentation.import_wallet.ImportWalletFragment"
+        android:label="fragment_import_wallet"
+        tools:layout="@layout/fragment_import_wallet">
+
+    </fragment>
+
+</navigation>

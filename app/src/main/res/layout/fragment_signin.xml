@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_login_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cv_login_email"
+        android:text="@string/sign_in_email_title"
+        android:fontFamily="@font/league_spartan_light"
+        android:textSize="14sp"
+        android:textColor="@color/gray_400">
+
+    </TextView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_login_email"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_login_email"
+        app:cardCornerRadius="18dp"
+        app:cardBackgroundColor="@color/black_almost"
+        android:checked="false"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp">
+
+        <ro.ase.chirita.xscrypt.components.EditTextPersonalized
+            android:id="@+id/et_login_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_almost"
+            android:paddingStart="8dp"
+            android:paddingEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/league_spartan_regular"
+            android:maxLines="1"
+            android:inputType="textEmailAddress"
+            >
+        </ro.ase.chirita.xscrypt.components.EditTextPersonalized>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tv_login_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_login_email"
+        app:layout_constraintBottom_toTopOf="@id/cv_login_password"
+        android:text="@string/sign_in_password_title"
+        android:fontFamily="@font/league_spartan_light"
+        android:textSize="14sp"
+        android:textColor="@color/gray_400">
+
+    </TextView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_login_password"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_login_password"
+        app:cardCornerRadius="18dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        app:cardBackgroundColor="@color/black_almost"
+        android:layout_marginTop="8dp">
+
+        <ro.ase.chirita.xscrypt.components.EditTextPersonalized
+            android:id="@+id/et_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_almost"
+            android:layout_marginStart="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="16dp"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/league_spartan_regular"
+            android:checked="false"
+            android:maxLines="1"
+            android:inputType="textPassword">
+        </ro.ase.chirita.xscrypt.components.EditTextPersonalized>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="52.5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_login_terms_of_use"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:textAllCaps="false"
+        android:text="@string/sign_in_started_button"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/league_spartan_regular"
+        android:background="@drawable/buttons_blue_light_black_borders"
+        android:textSize="19sp"
+        android:letterSpacing="0.05">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:id="@+id/tv_login_terms_of_use"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp"
+        android:textColor="@color/gray_400"
+        android:fontFamily="@font/league_spartan_light"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:text="@string/terms_of_use">
+
+    </TextView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_sign_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="48dp"
+        android:visibility="gone">
+
+    </ProgressBar>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

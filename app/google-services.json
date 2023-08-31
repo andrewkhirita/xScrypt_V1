@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "977458825256",
+    "project_id": "xscrypt-58ccb",
+    "storage_bucket": "xscrypt-58ccb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977458825256:android:709b97fdb3d3f070a84d1d",
+        "android_client_info": {
+          "package_name": "ro.ase.chirita.xscrypt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977458825256-7ndqnl9r5mheud38c8mlku0ff9f41fae.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFFg9BdLCa4gst6AvRUyrgQDAlnK-IsN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977458825256-7ndqnl9r5mheud38c8mlku0ff9f41fae.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.medical_id.MedicalIdFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="32dp">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_close"
+            >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/tv_patient_form_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/cv_patient_form_full_name"
+            android:text="Full Name"
+            android:fontFamily="@font/league_spartan_light"
+            android:textSize="14sp"
+            android:textColor="@color/gray_400">
+
+        </TextView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_patient_form_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_patient_form_full_name"
+            app:cardCornerRadius="18dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:cardBackgroundColor="@color/black_almost"
+            app:strokeWidth="1.20dp"
+            app:strokeColor="@color/black_almost"
+            android:layout_marginTop="8dp">
+
+            <ro.ase.chirita.xscrypt.components.EditTextPersonalized
+                android:id="@+id/et_patient_form_full_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/black_almost"
+                android:background="@color/black_almost"
+                android:paddingStart="8dp"
+                android:paddingEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/league_spartan_regular"
+                android:maxLines="1"
+                android:inputType="text"
+                >
+            </ro.ase.chirita.xscrypt.components.EditTextPersonalized>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_patient_form_date_of_birth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_patient_form_full_name"
+            app:layout_constraintBottom_toTopOf="@id/cv_patient_form_date_of_birth"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Date of Birth"
+            android:fontFamily="@font/league_spartan_light"
+            android:textSize="14sp"
+            android:textColor="@color/gray_400">
+
+        </TextView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_patient_form_date_of_birth"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_patient_form_date_of_birth"
+            app:cardCornerRadius="18dp"
+            android:layout_marginStart="32dp"
+            app:cardBackgroundColor="@color/black_almost"
+            app:strokeColor="@color/black_almost"
+            android:layout_marginEnd="32dp"
+            app:strokeWidth="1.20dp"
+            android:layout_marginTop="8dp">
+
+            <DatePicker
+                android:id="@+id/datePicker1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                style="@style/MySpinnerDatePicker"
+                android:layout_gravity="center_vertical"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_patient_form_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_patient_form_date_of_birth"
+            android:text="Gender"
+            android:fontFamily="@font/league_spartan_light"
+            android:textSize="14sp"
+            android:textColor="@color/gray_400">
+
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/ll_patient_form_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_patient_form_gender"
+            android:layout_marginTop="16dp"
+            android:gravity="center">
+
+            <RadioGroup
+                android:id="@+id/rg_patient_form_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_patient_form_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MALE"
+                    android:fontFamily="@font/league_spartan_regular"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@drawable/radio_null"
+                    android:gravity="center"
+                    android:elevation="4dp"
+                    android:textColor="@drawable/radio_text_selector"
+                    android:checked="true">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rb_patient_form_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FEMALE"
+                    android:fontFamily="@font/league_spartan_regular"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@drawable/radio_null"
+                    android:layout_marginStart="32dp"
+                    android:gravity="center"
+                    android:elevation="4dp"
+                    android:paddingHorizontal="16dp"
+                    android:textColor="@drawable/radio_text_selector">
+
+                </RadioButton>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_patient_form_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_patient_form_gender"
+            app:layout_constraintBottom_toTopOf="@id/cv_patient_form_address"
+            android:text="Address"
+            android:fontFamily="@font/league_spartan_light"
+            android:textSize="14sp"
+            android:textColor="@color/gray_400">
+
+        </TextView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_patient_form_address"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_patient_form_address"
+            app:cardCornerRadius="18dp"
+            android:layout_marginStart="32dp"
+            app:cardBackgroundColor="@color/black_almost"
+            android:layout_marginEnd="32dp"
+            app:strokeWidth="1.20dp"
+            app:strokeColor="@color/black_almost"
+            android:layout_marginTop="8dp">
+
+            <ro.ase.chirita.xscrypt.components.EditTextPersonalized
+                android:id="@+id/et_patient_form_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_almost"
+                android:backgroundTint="@color/black_almost"
+                android:paddingStart="8dp"
+                android:paddingEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/league_spartan_regular"
+                android:maxLines="1"
+                android:inputType="text">
+            </ro.ase.chirita.xscrypt.components.EditTextPersonalized>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_patient_form_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_patient_form_address"
+            app:layout_constraintBottom_toTopOf="@id/cv_patient_form_city"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="City"
+            android:fontFamily="@font/league_spartan_light"
+            android:textSize="14sp"
+            android:textColor="@color/gray_400">
+
+        </TextView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_patient_form_city"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_patient_form_city"
+            app:cardCornerRadius="18dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:cardBackgroundColor="@color/black_almost"
+            app:strokeColor="@color/black_almost"
+            app:strokeWidth="1.20dp"
+            android:layout_marginTop="8dp">
+
+            <ro.ase.chirita.xscrypt.components.EditTextPersonalized
+                android:id="@+id/et_patient_form_city"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_almost"
+                android:backgroundTint="@color/black_almost"
+                android:paddingStart="8dp"
+                android:paddingEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/league_spartan_regular"
+                android:maxLines="1"
+                android:inputType="text">
+            </ro.ase.chirita.xscrypt.components.EditTextPersonalized>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_patient_form_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_patient_form_city"
+            app:layout_constraintBottom_toTopOf="@id/cv_patient_form_state"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Nationality"
+            android:fontFamily="@font/league_spartan_light"
+            android:textSize="14sp"
+            android:textColor="@color/gray_400">
+
+        </TextView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_patient_form_state"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_patient_form_state"
+            app:cardCornerRadius="18dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:cardBackgroundColor="@color/black_almost"
+            app:strokeWidth="1.2dp"
+            app:strokeColor="@color/black_almost"
+            android:layout_marginTop="8dp">
+
+            <ro.ase.chirita.xscrypt.components.EditTextPersonalized
+                android:id="@+id/et_patient_form_state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_almost"
+                android:backgroundTint="@color/black_almost"
+                android:paddingStart="8dp"
+                android:paddingEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/league_spartan_regular"
+                android:maxLines="1"
+                android:inputType="text">
+            </ro.ase.chirita.xscrypt.components.EditTextPersonalized>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_patient_form_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_patient_form_state"
+            app:layout_constraintBottom_toTopOf="@id/cv_patient_form_phone_number"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Phone number"
+            android:fontFamily="@font/league_spartan_light"
+            android:textSize="14sp"
+            android:textColor="@color/gray_400">
+
+        </TextView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_patient_form_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_patient_form_phone_number"
+            app:cardCornerRadius="18dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:cardBackgroundColor="@color/black_almost"
+            app:strokeWidth="1.2dp"
+            app:strokeColor="@color/black_almost"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.rilixtech.widget.countrycodepicker.CountryCodePicker
+                    android:id="@+id/ccp_patient"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_textSize="18sp"
+                    app:ccp_arrowSize="18sp"
+                    app:ccp_hideNameCode="true"
+                    app:ccp_textFont="@font/league_spartan_medium"
+                    app:ccp_textColor="@color/white_almost"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="24dp"
+                    app:ccp_backgroundColor="@color/black_almost"
+                    app:ccp_dialogTextColor="@color/white_almost"
+                    app:ccp_showFlag="true" />
+
+                <View
+                    android:layout_width="0.5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/gray_400"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    />
+
+                <ro.ase.chirita.xscrypt.components.EditTextPersonalized
+                    android:id="@+id/et_patient_form_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/black_almost"
+                    android:backgroundTint="@color/black_almost"
+                    android:textColorHint="@color/grey"
+                    android:textSize="18sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/league_spartan_regular"
+                    android:maxLines="1"
+                    android:maxLength="12"
+                    android:inputType="phone">
+                </ro.ase.chirita.xscrypt.components.EditTextPersonalized>
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_patient_form_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_patient_form_phone_number"
+            app:layout_constraintBottom_toTopOf="@id/cv_patient_form_weight"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Weight (kg)"
+            android:fontFamily="@font/league_spartan_light"
+            android:textSize="14sp"
+            android:textColor="@color/gray_400">
+
+        </TextView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_patient_form_weight"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_patient_form_phone_number"
+            app:cardCornerRadius="18dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:cardBackgroundColor="@color/black_almost"
+            app:strokeColor="@color/black_almost"
+            app:strokeWidth="1.2dp"
+            android:layout_marginTop="48dp">
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/nb_user_details_weight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                app:np_dividerType="underline"
+                app:np_dividerColor="@color/neon_v2"
+                app:np_max="300"
+                app:np_min="40"
+                app:np_orientation="horizontal"
+                app:np_selectedTextColor="@color/white"
+                android:layout_gravity="center"
+                app:np_selectedTextSize="27.5sp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginStart="48dp"
+                app:np_textColor="@color/white"
+                app:np_textSize="15.5sp"
+                app:np_value="3" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_patient_form_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_patient_form_weight"
+            app:layout_constraintBottom_toTopOf="@id/cv_patient_form_height"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Height (cm)"
+            android:fontFamily="@font/league_spartan_light"
+            android:textSize="14sp"
+            android:textColor="@color/gray_400">
+
+        </TextView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_patient_form_height"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_patient_form_weight"
+            app:cardCornerRadius="18dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            app:cardBackgroundColor="@color/black_almost"
+            app:strokeColor="@color/black_almost"
+            app:strokeWidth="1.2dp"
+            android:layout_marginTop="48dp">
+
+            <com.shawnlin.numberpicker.NumberPicker
+                android:id="@+id/nb_user_details_height"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                app:np_dividerType="underline"
+                app:np_dividerColor="@color/neon_v2"
+                app:np_max="230"
+                app:np_min="150"
+                app:np_orientation="horizontal"
+                app:np_selectedTextColor="@color/white"
+                android:layout_gravity="center"
+                app:np_selectedTextSize="27.5sp"
+                android:layout_marginEnd="48dp"
+                android:layout_marginStart="48dp"
+                app:np_textColor="@color/white"
+                app:np_textSize="15.5sp"
+                app:np_value="3" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_patient_form_blood_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_patient_form_height"
+            app:layout_constraintBottom_toTopOf="@id/ll_patient_form_blood_group"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="Blood Group"
+            android:fontFamily="@font/league_spartan_light"
+            android:textSize="14sp"
+            android:textColor="@color/gray_400">
+
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/ll_patient_form_blood_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cv_patient_form_height"
+            android:layout_marginTop="48dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:gravity="center">
+
+            <RadioGroup
+                android:id="@+id/rg_patient_form_blood_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_patient_form_blood_group_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:fontFamily="@font/league_spartan_regular"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="8dp"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@drawable/radio_null"
+                    android:gravity="center"
+                    android:elevation="4dp"
+                    android:textColor="@drawable/radio_text_selector"
+                    android:checked="true">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rb_patient_form_blood_group_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B"
+                    android:fontFamily="@font/league_spartan_regular"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@drawable/radio_null"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center"
+                    android:elevation="4dp"
+                    android:paddingHorizontal="16dp"
+                    android:textColor="@drawable/radio_text_selector">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rb_patient_form_blood_group_ab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AB"
+                    android:fontFamily="@font/league_spartan_regular"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@drawable/radio_null"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center"
+                    android:elevation="4dp"
+                    android:paddingHorizontal="16dp"
+                    android:textColor="@drawable/radio_text_selector">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/rb_patient_form_blood_group_0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:fontFamily="@font/league_spartan_regular"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="8dp"
+                    android:background="@drawable/radio_selector"
+                    android:button="@drawable/radio_null"
+                    android:layout_marginStart="16dp"
+                    android:gravity="center"
+                    android:layout_marginEnd="8dp"
+                    android:elevation="4dp"
+                    android:paddingHorizontal="16dp"
+                    android:textColor="@drawable/radio_text_selector">
+
+                </RadioButton>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_patient_form_blood_group"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="@color/neon_v2">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cv_save"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:cardCornerRadius="25dp"
+                app:cardBackgroundColor="@color/neon_v2"
+                app:strokeWidth="1.2dp"
+                app:strokeColor="@color/neon_v2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:text="Save"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/league_spartan_regular"
+                        android:textSize="18sp"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/black">
+                    </TextView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
